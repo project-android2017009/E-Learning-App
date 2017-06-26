@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class SplashScreen extends AppCompatActivity {
+public class SplashScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +18,12 @@ public class SplashScreen extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this, Main2Activity.class);
+                Intent intent = new Intent(SplashScreenActivity.this, SliderWalkthroughActivity.class);
                 startActivity(intent);
                 finish();
             }
-        }, 2500);
+        }, 2000);
+
+
     }
 }

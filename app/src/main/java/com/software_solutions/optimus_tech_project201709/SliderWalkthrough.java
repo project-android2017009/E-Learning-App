@@ -17,7 +17,7 @@ public class SliderWalkthrough {
         this.context = context;
         sharedPreferences=context.getSharedPreferences("first",0);
         editor=sharedPreferences.edit();
-    }
+     }
 
     public void setFirst(Boolean firstTime){
         editor.putBoolean("check",firstTime);
