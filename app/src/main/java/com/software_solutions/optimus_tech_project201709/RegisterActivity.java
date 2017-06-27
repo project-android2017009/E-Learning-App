@@ -9,9 +9,10 @@ import android.widget.Spinner;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText userName;
+    private EditText name;
     private EditText emailAddress;
     private EditText phoneno;
+    private EditText city;
     private Spinner spinner;
     private FloatingActionButton button;
 
@@ -20,24 +21,20 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        userName=(EditText)findViewById(R.id.userName);
-        emailAddress=(EditText)findViewById(R.id.userEmailAddress);
-        phoneno=(EditText)findViewById(R.id.userPhoneNumber);
-        spinner=(Spinner)findViewById(R.id.spinnerCountry);
-        button=(FloatingActionButton)findViewById(R.id.registerButton);
+        name = (EditText) findViewById(R.id.register_userName);
+        emailAddress = (EditText) findViewById(R.id.register_userEmailAddress);
+        phoneno = (EditText) findViewById(R.id.register_userPhoneNumber);
+        spinner = (Spinner) findViewById(R.id.register_spinnerCountry);
+        city = (EditText) findViewById(R.id.register_userCity);
+        button = (FloatingActionButton) findViewById(R.id.registerButton);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                submitEntry();
             }
         });
 
 
-
     }
 
-    private void submitEntry() {
-
-    }
 }

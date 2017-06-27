@@ -15,17 +15,16 @@ public class SliderWalkthrough {
 
     public SliderWalkthrough(Context context) {
         this.context = context;
-        sharedPreferences=context.getSharedPreferences("first",0);
-        editor=sharedPreferences.edit();
-     }
+        sharedPreferences = context.getSharedPreferences("first", 0);
+        editor = sharedPreferences.edit();
+    }
 
-    public void setFirst(Boolean firstTime){
-        editor.putBoolean("check",firstTime);
+    public void setFirst(Boolean firstTime) {
+        editor.putBoolean(StringTag.FIRST_TIME_CHECK, firstTime);
         editor.commit();
     }
 
-    public boolean Check()
-    {
-        return sharedPreferences.getBoolean("check",true);
+    public boolean Check() {
+        return sharedPreferences.getBoolean(StringTag.FIRST_TIME_CHECK, true);
     }
 }

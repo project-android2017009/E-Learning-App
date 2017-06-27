@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.software_solutions.optimus_tech_project201709.RegisterActivity">
+    tools:context="com.software_solutions.optimus_tech_project201709.LoginActivity">
 
 
     <LinearLayout
@@ -31,13 +31,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="Access 1000s of Videos and Tests."
+        android:text="Welcome Back"
         android:textColor="#fff"
         android:textSize="20sp" />
 
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -56,56 +56,36 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="REGISTER"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:text="LOGIN"
+                android:textSize="25sp" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/register_userName"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="NAME"
-                android:inputType="textPersonName" />
+                android:text="MOBILE NUMBER"
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingBottom="100dp">
 
                 <Spinner
-                    android:id="@+id/register_spinnerCountry"
+                    android:id="@+id/user_login_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="6" />
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/register_userPhoneNumber"
+                    android:id="@+id/user_login_phoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:hint="MOBILE NUMBER"
-                    android:inputType="phone" />
+                    android:layout_weight="4" />
             </LinearLayout>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/register_userEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:hint="EMAIL ID"
-                android:inputType="textEmailAddress" />
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/register_userCity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:hint="CITY/NEAREST LOCATION"
-                android:inputType="text" />
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
@@ -116,50 +96,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/cardView"
+        android:layout_below="@+id/cardView1"
         android:layout_marginRight="20dp"
         android:layout_marginTop="-20dp" />
 
-
     <LinearLayout
-        android:gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_below="@+id/cardView"
+        android:layout_below="@+id/cardView1"
         android:layout_centerInParent="true"
-        >
+        android:gravity="center_vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have a Account?" />
+            android:text="Don't have a Account?" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="Login" />
+            android:text="Register" />
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="15dp"
-        android:text="Privacy Policy" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:padding="10dp"
-        android:text="TC" />
-
-
-
 
 </RelativeLayout>

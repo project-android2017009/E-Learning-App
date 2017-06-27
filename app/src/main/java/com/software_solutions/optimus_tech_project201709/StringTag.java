@@ -6,5 +6,6 @@ package com.software_solutions.optimus_tech_project201709;
 
 public class StringTag {
 
-    public static final String registerTag="register";
+
+    public static final String FIRST_TIME_CHECK = "check";
 }
