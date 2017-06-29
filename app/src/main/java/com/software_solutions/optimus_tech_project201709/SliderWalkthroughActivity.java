@@ -69,7 +69,7 @@ public class SliderWalkthroughActivity extends AppCompatActivity {
 
         }
 
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.slider_walkthrough_activity);
 
         viewPager = (ViewPager) findViewById(R.id.id_WalkThroughViewPager);
         dotsLayout = (LinearLayout) findViewById(R.id.layout_dots);
@@ -78,7 +78,6 @@ public class SliderWalkthroughActivity extends AppCompatActivity {
 
         layouts = new int[]{R.layout.slider_walkthrough_screen1, R.layout.slider_walkthrough_screen2, R.layout.slider_walkthrough_screen3};
         addButtonDots(0);
-//        changeStatusBarColor();
         adapter = new ViewPagerAdapter();
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(listener);
@@ -132,14 +131,6 @@ public class SliderWalkthroughActivity extends AppCompatActivity {
         return viewPager.getCurrentItem() + 1;
     }
 
-//    private void changeStatusBarColor() {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            Window window = getWindow();
-//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-//            window.setStatusBarColor(Color.TRANSPARENT);
-//
-//        }
-//    }
 
     public class ViewPagerAdapter extends PagerAdapter {
 

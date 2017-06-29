@@ -30,8 +30,10 @@
             android:theme="@style/NoActionBar" />
         <activity
             android:name=".RegisterActivity"
-            android:theme="@style/NoActionBar" />
-        <activity android:name=".LoginActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

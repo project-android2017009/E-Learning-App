@@ -6,6 +6,13 @@
     android:background="#ffffff"
     tools:context="com.software_solutions.optimus_tech_project201709.CourseSelectionActivity">
 
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Register" />
+
 
     <ImageView
         android:id="@+id/dialogImageView"

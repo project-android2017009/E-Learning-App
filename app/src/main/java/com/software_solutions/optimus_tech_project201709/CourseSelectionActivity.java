@@ -1,5 +1,6 @@
 package com.software_solutions.optimus_tech_project201709;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -16,7 +17,7 @@ public class CourseSelectionActivity extends AppCompatActivity {
     StringBuffer stringBuffer = null;
     AdapterC adapterC;
     private RecyclerView recyclerView;
-    private Button button;
+    private Button button, register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,18 @@ public class CourseSelectionActivity extends AppCompatActivity {
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewSelectCourse);
 
+        register = (Button) findViewById(R.id.register);
         adapterC = new AdapterC(this, getCourse());
         button = (Button) findViewById(R.id.button1);
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CourseSelectionActivity.this, RegisterActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
