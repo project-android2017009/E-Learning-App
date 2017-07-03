@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e9e7e7"
-    tools:context="com.software_solutions.optimus_tech_project201709.RegisterActivity">
+    tools:context="com.software_solutions.optimus_tech_project201709.Activity.RegisterActivity">
 
 
     <LinearLayout

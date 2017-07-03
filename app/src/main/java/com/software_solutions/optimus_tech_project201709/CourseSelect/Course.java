@@ -1,7 +1,7 @@
-package com.software_solutions.optimus_tech_project201709;
+package com.software_solutions.optimus_tech_project201709.CourseSelect;
 
 /**
- * Created by H.P on 25-Jun-17.
+ * Created by H.P on 29-Jun-17.
  */
 
 public class Course {

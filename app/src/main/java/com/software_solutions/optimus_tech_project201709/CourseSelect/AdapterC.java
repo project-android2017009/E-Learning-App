@@ -1,4 +1,4 @@
-package com.software_solutions.optimus_tech_project201709;
+package com.software_solutions.optimus_tech_project201709.CourseSelect;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+
+import com.software_solutions.optimus_tech_project201709.R;
 
 import java.util.ArrayList;
 

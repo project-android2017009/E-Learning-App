@@ -1,4 +1,4 @@
-package com.software_solutions.optimus_tech_project201709;
+package com.software_solutions.optimus_tech_project201709.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;

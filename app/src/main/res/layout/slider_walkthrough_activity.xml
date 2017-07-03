@@ -4,7 +4,7 @@
     android:background="#ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.software_solutions.optimus_tech_project201709.SliderWalkthroughActivity">
+    tools:context="com.software_solutions.optimus_tech_project201709.Activity.SliderWalkthroughActivity">
 
 
     <android.support.v4.view.ViewPager

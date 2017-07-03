@@ -1,7 +1,8 @@
-package com.software_solutions.optimus_tech_project201709;
+package com.software_solutions.optimus_tech_project201709.Activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
@@ -14,6 +15,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.software_solutions.optimus_tech_project201709.CourseSelect.CourseSelectionActivity;
+import com.software_solutions.optimus_tech_project201709.R;
+import com.software_solutions.optimus_tech_project201709.StringTag;
 
 public class SliderWalkthroughActivity extends AppCompatActivity {
 
@@ -158,6 +163,30 @@ public class SliderWalkthroughActivity extends AppCompatActivity {
         public void destroyItem(ViewGroup container, int position, Object object) {
             View view = (View) object;
             container.removeView(view);
+        }
+    }
+
+
+
+    public class SliderWalkthrough {
+
+        SharedPreferences sharedPreferences;
+        SharedPreferences.Editor editor;
+        Context context;
+
+        public SliderWalkthrough(Context context) {
+            this.context = context;
+            sharedPreferences = context.getSharedPreferences("first", 0);
+            editor = sharedPreferences.edit();
+        }
+
+        public void setFirst(Boolean firstTime) {
+            editor.putBoolean(StringTag.FIRST_TIME_CHECK, firstTime);
+            editor.commit();
+        }
+
+        public boolean Check() {
+            return sharedPreferences.getBoolean(StringTag.FIRST_TIME_CHECK, true);
         }
     }
 }
