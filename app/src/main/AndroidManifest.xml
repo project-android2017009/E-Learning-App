@@ -41,10 +41,12 @@
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".Activity.YouTubePlayerActivity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.SubjectActivity"
+            android:label="Subject" />
     </application>
 
 </manifest>

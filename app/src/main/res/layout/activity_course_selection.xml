@@ -7,6 +7,12 @@
     android:background="#ffffff"
     tools:context="com.software_solutions.optimus_tech_project201709.CourseSelect.CourseSelectionActivity">
 
+    <Button
+        android:text="ok"
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <ImageView
         android:id="@+id/dialogImageView"
         android:layout_width="match_parent"
