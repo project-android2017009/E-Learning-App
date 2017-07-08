@@ -63,7 +63,7 @@ public class SliderWalkthroughActivity extends AppCompatActivity {
 
         sliderWalkthrough = new SliderWalkthrough(this);
         if (!sliderWalkthrough.Check()) {
-            Intent intent = new Intent(SliderWalkthroughActivity.this, CourseSelectionActivity.class);
+            Intent intent = new Intent(SliderWalkthroughActivity.this, NavigatorActivity.class);
             startActivity(intent);
             finish();
         }
@@ -89,7 +89,7 @@ public class SliderWalkthroughActivity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SliderWalkthroughActivity.this, CourseSelectionActivity.class);
+                Intent intent = new Intent(SliderWalkthroughActivity.this, NavigatorActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +102,7 @@ public class SliderWalkthroughActivity extends AppCompatActivity {
                 if (current < layouts.length) {
                     viewPager.setCurrentItem(current);
                 } else {
-                    Intent intent = new Intent(SliderWalkthroughActivity.this, CourseSelectionActivity.class);
+                    Intent intent = new Intent(SliderWalkthroughActivity.this, NavigatorActivity.class);
                     startActivity(intent);
                     finish();
                 }

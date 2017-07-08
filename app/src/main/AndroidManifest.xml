@@ -47,7 +47,10 @@
         <activity
             android:name=".Activity.SubjectActivity"
             android:label="Subject" />
-        <activity android:name=".Activity.CourseSelectionActivity"></activity>
+        <activity
+            android:name=".Activity.CourseSelectionActivity"
+            android:noHistory="true" />
+        <activity android:name=".Activity.NavigatorActivity"/>
     </application>
 
 </manifest>

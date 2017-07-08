@@ -5,12 +5,11 @@
     android:layout_height="match_parent"
     tools:context="com.software_solutions.optimus_tech_project201709.Activity.SubjectActivity">
 
-
     <ListView
-        android:padding="10dp"
         android:id="@+id/listview_lesson"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="10dp"
         android:text="Hello" />
 
 </RelativeLayout>

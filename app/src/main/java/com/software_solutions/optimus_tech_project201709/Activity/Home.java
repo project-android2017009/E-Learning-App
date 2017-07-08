@@ -13,14 +13,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.software_solutions.optimus_tech_project201709.Adapters.DemoVideoAdapter;
 import com.software_solutions.optimus_tech_project201709.Adapters.ChooseSubjectAdapter;
+import com.software_solutions.optimus_tech_project201709.Adapters.DemoVideoAdapter;
 import com.software_solutions.optimus_tech_project201709.R;
 
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    RecyclerView recyclerView,recyclerViewHome;
+    RecyclerView recyclerView, recyclerViewHome;
     RecyclerView.LayoutManager mLayoutManager;
     RecyclerView.Adapter mAdapter;
 
@@ -52,6 +52,8 @@ public class Home extends AppCompatActivity
 
         recyclerViewHome.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true));
         recyclerViewHome.setAdapter(new DemoVideoAdapter());
+
+
     }
 
     @Override

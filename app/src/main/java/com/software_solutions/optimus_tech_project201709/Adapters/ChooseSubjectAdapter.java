@@ -3,10 +3,11 @@ package com.software_solutions.optimus_tech_project201709.Adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
 import com.software_solutions.optimus_tech_project201709.Activity.SubjectActivity;
 import com.software_solutions.optimus_tech_project201709.R;
@@ -45,6 +46,7 @@ public class ChooseSubjectAdapter extends RecyclerView.Adapter<GridViewHolder> {
     public void onBindViewHolder(GridViewHolder gridViewHolder, int i) {
         MenItem menItem = menItems.get(i);
         gridViewHolder.bindData(menItem);
+
     }
 
     @Override
@@ -66,52 +68,58 @@ class MenItem {
 
 class GridViewHolder extends RecyclerView.ViewHolder {
 
-    private Button itemName;
+    private TextView itemName;
     private Context context;
 
-    public GridViewHolder(View itemView) {
+    public GridViewHolder(final View itemView) {
         super(itemView);
 
         context = itemView.getContext();
 
-        itemName = (Button) itemView.findViewById(R.id.button_subject);
+        itemName = (TextView) itemView.findViewById(R.id.button_subject);
 
         itemView.setOnClickListener(new View.OnClickListener() {
+
+            String subjectname;
+
             @Override
             public void onClick(View view) {
                 if (getAdapterPosition() == 0) {
-
-
+                    subjectname = itemName.getText().toString();
+                    Log.d("ashu", "subject name" + subjectname);
                     Intent intent = new Intent(context, SubjectActivity.class);
                     context.startActivity(intent);
                 }
 
                 if (getAdapterPosition() == 1) {
 
-
+                    subjectname = itemName.getText().toString();
+                    Log.d("ashu", "subject name" + subjectname);
                     Intent intent = new Intent(context, SubjectActivity.class);
                     context.startActivity(intent);
                 }
                 if (getAdapterPosition() == 2) {
 
-
+                    subjectname = itemName.getText().toString();
+                    Log.d("ashu", "subject name" + subjectname);
                     Intent intent = new Intent(context, SubjectActivity.class);
                     context.startActivity(intent);
                 }
                 if (getAdapterPosition() == 3) {
 
-
+                    subjectname = itemName.getText().toString();
+                    Log.d("ashu", "subject name" + subjectname);
                     Intent intent = new Intent(context, SubjectActivity.class);
                     context.startActivity(intent);
                 }
                 if (getAdapterPosition() == 4) {
 
-
+                    subjectname = itemName.getText().toString();
                     Intent intent = new Intent(context, SubjectActivity.class);
                     context.startActivity(intent);
                 }
                 if (getAdapterPosition() == 5) {
-
+                    subjectname = itemName.getText().toString();
                     Intent intent = new Intent(context, SubjectActivity.class);
                     context.startActivity(intent);
                 }

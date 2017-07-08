@@ -20,15 +20,15 @@ public class ListAdapter extends BaseAdapter {
 
     private Context context;
     private int lengt=4;
-    private String[] names={"Lesson 1","Lesson 2","Lesson 3 ","Lesson 4","Lesson 5","Lesson 6","Lesson 7","Lesson 8","Lesson 9","Lesson 10"};
+    private String[] names={"Lesson 1: Intro","Lesson 2: Addition","Lesson 3: Subtraction","Lesson 4: Multiplication","Lesson 5: Geometry","Lesson 6: Shapes","Lesson 7: Quad","Lesson 8: Fun","Lesson 9: Problems-1","Lesson 10: Problems-2"};
     LayoutInflater layoutInflater;
-    DemoVideoAdapter recyclerAdapter;
+    LessonVideoAdapter recyclerAdapter;
 
     public ListAdapter(Context context) {
         this.context = context;
         layoutInflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        recyclerAdapter=new DemoVideoAdapter();
+        recyclerAdapter=new LessonVideoAdapter();
     }
 
     @Override
