@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context="com.software_solutions.optimus_tech_project201709.CourseSelect.CourseSelectionActivity">
+    tools:context=".Activity.CourseSelectionActivity">
 
-    <Button
-        android:text="ok"
-        android:id="@+id/ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
     <ImageView
         android:id="@+id/dialogImageView"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="200dp"
         android:scaleType="fitXY"
         android:src="@drawable/dialog"
         android:text="Hello" />
@@ -52,18 +47,67 @@
         android:orientation="vertical"
         android:weightSum="3">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerViewSelectCourse"
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:padding="5dp" />
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/grade_4th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="4th grade"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/grade_5th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="5th grade"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/grade_6th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="6th grade"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/grade_7th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="7th grade"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RadioGroup>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewDemoVideo"
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </LinearLayout>
 

@@ -3,7 +3,6 @@ package com.software_solutions.optimus_tech_project201709.Adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,7 +80,37 @@ class GridViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 if (getAdapterPosition() == 0) {
-                    Log.d("ashu", "listner ");
+
+
+                    Intent intent = new Intent(context, SubjectActivity.class);
+                    context.startActivity(intent);
+                }
+
+                if (getAdapterPosition() == 1) {
+
+
+                    Intent intent = new Intent(context, SubjectActivity.class);
+                    context.startActivity(intent);
+                }
+                if (getAdapterPosition() == 2) {
+
+
+                    Intent intent = new Intent(context, SubjectActivity.class);
+                    context.startActivity(intent);
+                }
+                if (getAdapterPosition() == 3) {
+
+
+                    Intent intent = new Intent(context, SubjectActivity.class);
+                    context.startActivity(intent);
+                }
+                if (getAdapterPosition() == 4) {
+
+
+                    Intent intent = new Intent(context, SubjectActivity.class);
+                    context.startActivity(intent);
+                }
+                if (getAdapterPosition() == 5) {
 
                     Intent intent = new Intent(context, SubjectActivity.class);
                     context.startActivity(intent);

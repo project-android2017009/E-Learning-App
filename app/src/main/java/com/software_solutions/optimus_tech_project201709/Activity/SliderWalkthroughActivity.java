@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.software_solutions.optimus_tech_project201709.CourseSelect.CourseSelectionActivity;
 import com.software_solutions.optimus_tech_project201709.R;
 import com.software_solutions.optimus_tech_project201709.StringTag;
 

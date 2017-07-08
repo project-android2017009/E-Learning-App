@@ -23,7 +23,6 @@ public class DemoVideoAdapter extends RecyclerView.Adapter<SlipDataHolder> {
 
     private List<StringList> slipList;
 
-
     public DemoVideoAdapter() {
         slipList = new ArrayList<>();
         slipList.add(new StringList("Demo Video One", R.drawable.demo_one));

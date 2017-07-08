@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CourseSelect.CourseSelectionActivity"
+            android:name=".Activity.CourseSelect.CourseSelectionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
@@ -47,6 +47,7 @@
         <activity
             android:name=".Activity.SubjectActivity"
             android:label="Subject" />
+        <activity android:name=".Activity.CourseSelectionActivity"></activity>
     </application>
 
 </manifest>
