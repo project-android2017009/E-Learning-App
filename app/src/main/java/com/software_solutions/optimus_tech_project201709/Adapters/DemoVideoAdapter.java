@@ -34,7 +34,7 @@ public class DemoVideoAdapter extends RecyclerView.Adapter<SlipDataHolder> {
     public SlipDataHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.abc_demo_video, parent, false);
+        View view = inflater.inflate(R.layout.abc_card_view_video, parent, false);
         return new SlipDataHolder(view);
 
     }
