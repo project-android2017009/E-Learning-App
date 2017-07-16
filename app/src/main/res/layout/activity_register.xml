@@ -44,31 +44,32 @@
         android:layout_centerInParent="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginTop="-100dp"
         android:elevation="5dp"
         app:cardCornerRadius="3dp">
 
         <LinearLayout
-            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#fff"
             android:orientation="vertical"
             android:padding="10dp">
 
             <TextView
-                android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="REGISTER"
+                android:textColor="#000"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <android.support.design.widget.TextInputLayout
-                android:textColorHint="#bebcbc"
                 android:id="@+id/layout_register_userName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:textColorHint="#bebcbc">
 
                 <EditText
                     android:id="@+id/register_userName"
@@ -84,18 +85,11 @@
                 android:layout_marginTop="3dp"
                 android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/register_spinnerCountry"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6" />
-
                 <android.support.design.widget.TextInputLayout
-                    android:textColorHint="#bebcbc"
                     android:id="@+id/layout_register_userPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4">
+                    android:textColorHint="#bebcbc">
 
                     <EditText
                         android:id="@+id/register_userPhoneNumber"
@@ -107,11 +101,11 @@
             </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:textColorHint="#bebcbc"
                 android:id="@+id/layout_register_userEmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                android:layout_marginTop="3dp"
+                android:textColorHint="#bebcbc">
 
                 <EditText
                     android:id="@+id/register_userEmailAddress"
@@ -122,12 +116,12 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:textColorHint="#bebcbc"
                 android:id="@+id/layout_register_userCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="3dp">
+                android:layout_marginTop="3dp"
+                android:textColorHint="#bebcbc">
 
                 <EditText
                     android:id="@+id/register_userCity"
@@ -150,7 +144,8 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/cardView"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="-20dp" />
+        android:layout_marginTop="-20dp"
+        android:src="@drawable/tick" />
 
 
     <LinearLayout

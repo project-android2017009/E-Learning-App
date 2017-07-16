@@ -30,7 +30,6 @@ public class RegisterActivity extends AppCompatActivity {
         name = (EditText) findViewById(R.id.register_userName);
         emailAddress = (EditText) findViewById(R.id.register_userEmailAddress);
         phoneno = (EditText) findViewById(R.id.register_userPhoneNumber);
-        spinner = (Spinner) findViewById(R.id.register_spinnerCountry);
         city = (EditText) findViewById(R.id.register_userCity);
 
         button = (FloatingActionButton) findViewById(R.id.registerButton);
@@ -38,7 +37,6 @@ public class RegisterActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Register();
             }
 

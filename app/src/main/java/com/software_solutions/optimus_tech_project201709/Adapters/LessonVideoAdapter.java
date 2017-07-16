@@ -1,14 +1,19 @@
 package com.software_solutions.optimus_tech_project201709.Adapters;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.daimajia.androidviewhover.BlurLayout;
+import com.software_solutions.optimus_tech_project201709.Activity.CrosswordActivity;
+import com.software_solutions.optimus_tech_project201709.Activity.QuizActivity;
+import com.software_solutions.optimus_tech_project201709.Activity.YouTubePlayerActivity;
 import com.software_solutions.optimus_tech_project201709.R;
 
 import java.util.ArrayList;
@@ -17,11 +22,9 @@ import java.util.List;
 /**
  * Created by H.P on 08-Jul-17.
  */
-public class LessonVideoAdapter extends RecyclerView.Adapter<LessonDataHolder> {
+public class LessonVideoAdapter extends RecyclerView.Adapter<LessonVideoAdapter.LessonDataHolder> {
 
-    public BlurLayout samplelayout;
     private List<VideoList> slipList;
-    private Context mContext;
 
 
     public LessonVideoAdapter() {
@@ -37,25 +40,13 @@ public class LessonVideoAdapter extends RecyclerView.Adapter<LessonDataHolder> {
         slipList.add(new VideoList("Chapter 9", R.drawable.demo_one));
         slipList.add(new VideoList("Chapter 10", R.drawable.demo_two));
 
-
     }
 
     @Override
     public LessonDataHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        Context context = parent.getContext();
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.abc_card_view_video, parent, false);
-        View hover = inflater.inflate(R.layout.hover_card_view, null);
-        samplelayout = (BlurLayout) parent.findViewById(R.id.blur_layout);
-        samplelayout.setHoverView(hover);
-//
-//        samplelayout.addChildAppearAnimator(view, R.id.hover_play_video, Techniques.SlideInLeft);
-//        samplelayout.addChildDisappearAnimator(view, R.id.hover_play_video, Techniques.SlideInRight);
-//        samplelayout.addChildAppearAnimator(view, R.id.hover_play_quiz, Techniques.SlideInLeft);
-//        samplelayout.addChildDisappearAnimator(view, R.id.hover_play_quiz, Techniques.SlideOutRight);
-//        samplelayout.addChildAppearAnimator(view, R.id.hover_play_crossword, Techniques.SlideInLeft);
-//        samplelayout.addChildDisappearAnimator(view, R.id.hover_play_crossword, Techniques.SlideOutRight);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.abc_card_view_video, parent, false);
+
         return new LessonDataHolder(view);
 
     }
@@ -68,112 +59,86 @@ public class LessonVideoAdapter extends RecyclerView.Adapter<LessonDataHolder> {
 
     }
 
-
     @Override
     public int getItemCount() {
         return slipList.size();
     }
-}
-
-class LessonDataHolder extends RecyclerView.ViewHolder {
-
-    private TextView nameOfSlip;
-    private ImageView slipImage;
-    private Context context;
 
 
-    public LessonDataHolder(View itemView) {
-        super(itemView);
+    class LessonDataHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        context = itemView.getContext();
-        nameOfSlip = (TextView) itemView.findViewById(R.id.demoText);
-        slipImage = (ImageView) itemView.findViewById(R.id.imageViewDemoVideo);
 
-//        itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (getAdapterPosition() == 0) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "oYaR9wyLiWs");
-//                    context.startActivity(intent);
-//
-//                }
-//
-//                if (getAdapterPosition() == 1) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "GqdJFFvsZeE");
-//                    context.startActivity(intent);
-//
-//                }
-//                if (getAdapterPosition() == 2) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "igfHfyMPpzk");
-//                    context.startActivity(intent);
-//
-//                }
-//                if (getAdapterPosition() == 3) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "EEjyQ50Q6pc");
-//                    context.startActivity(intent);
-//
-//                }
-//                if (getAdapterPosition() == 4) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "oYaR9wyLiWs");
-//                    context.startActivity(intent);
-//
-//                }if (getAdapterPosition() == 5) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "GqdJFFvsZeE");
-//                    context.startActivity(intent);
-//
-//                }if (getAdapterPosition() == 6) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "igfHfyMPpzk");
-//                    context.startActivity(intent);
-//
-//                }if (getAdapterPosition() == 7) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "EEjyQ50Q6pc");
-//                    context.startActivity(intent);
-//
-//                }
-//                if (getAdapterPosition() == 1) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "GqdJFFvsZeE");
-//                    context.startActivity(intent);
-//
-//                }
-//                if (getAdapterPosition() == 8) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "GqdJFFvsZeE");
-//                    context.startActivity(intent);
-//
-//                }
-//                if (getAdapterPosition() == 9) {
-//
-//                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-//                    intent.putExtra("demoVideo", "GqdJFFvsZeE");
-//                    context.startActivity(intent);
-//
-//                }
-//            }
-//        });
-    }
+        private TextView nameOfSlip;
+        private ImageView slipImage;
+        private Context context;
 
-    public void bindSlip(VideoList videoList) {
-        nameOfSlip.setText(videoList.stringSlipName);
-        slipImage.setImageResource(videoList.stringImage);
+
+        public LessonDataHolder(View itemView) {
+            super(itemView);
+
+
+            context = itemView.getContext();
+            nameOfSlip = (TextView) itemView.findViewById(R.id.demoText);
+            slipImage = (ImageView) itemView.findViewById(R.id.imageViewDemoVideo);
+
+            slipImage.setOnClickListener(this);
+        }
+
+        public void bindSlip(VideoList videoList) {
+            nameOfSlip.setText(videoList.stringSlipName);
+            slipImage.setImageResource(videoList.stringImage);
+        }
+
+        @Override
+        public void onClick(final View view) {
+
+
+            if (view.getId() == slipImage.getId()) {
+
+//                String s = String.valueOf(getAdapterPosition()+1);
+                String s1 = ((nameOfSlip).getText().toString());
+
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.abc_dialog_option_chapter);
+                dialog.setTitle("What Do You Want?");
+
+                TextView text = (TextView) dialog.findViewById(R.id.dialogLessonName);
+                text.setText("Lesson Name");
+
+                TextView text1 = (TextView) dialog.findViewById(R.id.dialogChapterName);
+                text1.setText(s1);
+
+                Button b1 = (Button) dialog.findViewById(R.id.dialogPlayVideo);
+                b1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(context, YouTubePlayerActivity.class);
+                        intent.putExtra("demoVideo", "oYaR9wyLiWs");
+                        context.startActivity(intent);
+                    }
+                });
+                Button b2 = (Button) dialog.findViewById(R.id.dialogPlayQuiz);
+                b2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(context, QuizActivity.class);
+                        context.startActivity(intent);
+                    }
+                });
+                Button b3 = (Button) dialog.findViewById(R.id.dialogPlayCrossword);
+                b3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent intent = new Intent(context, CrosswordActivity.class);
+                        context.startActivity(intent);
+                    }
+                });
+
+                dialog.show();
+
+            }
+        }
     }
 }
 
@@ -187,3 +152,6 @@ class VideoList {
     }
 
 }
+
+
+

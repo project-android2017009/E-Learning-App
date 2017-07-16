@@ -1,84 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewVideo"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#e4a455"
+        app:cardCornerRadius="10dp">
 
-    <com.daimajia.androidviewhover.BlurLayout
-        android:id="@+id/blur_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="1">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardViewDemo1"
-            android:layout_width="220dp"
-            android:layout_height="180dp"
-            android:layout_margin="5dp"
-            android:elevation="5dp"
-            app:cardBackgroundColor="#e4a455"
-            app:cardCornerRadius="10dp">
+            <FrameLayout
+                android:id="@+id/frameDemoOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:weightSum="1">
-
-                <FrameLayout
-                    android:id="@+id/frameDemoOne"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".2">
-
-                    <ImageView
-                        android:id="@+id/imageViewDemoVideo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingBottom="3dp"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="3dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/demo_one" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/cardview_border" />
-
-                </FrameLayout>
-
-
-                <android.support.v7.widget.CardView
+                <ImageView
+                    android:id="@+id/imageViewDemoVideo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="5dp"
-                    android:layout_weight=".8"
-                    app:cardBackgroundColor="#e9e6e3"
-                    app:cardCornerRadius="10dp">
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/demo_one" />
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cardview_border" />
 
-                        <TextView
-                            android:id="@+id/demoText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="DEMOVIDEOONE"
-                            android:textColor="#c9750f"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
+            </FrameLayout>
 
 
-        </android.support.v7.widget.CardView>
-    </com.daimajia.androidviewhover.BlurLayout>
-</RelativeLayout>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".8"
+                app:cardBackgroundColor="#e9e6e3"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/demoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="DEMOVIDEOONE"
+                        android:textColor="#c9750f"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
 

@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:background="#ffffff">
 
+
         <ImageView
             android:id="@+id/dialog1"
             android:layout_width="match_parent"

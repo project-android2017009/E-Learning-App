@@ -21,15 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Activity.SliderWalkthroughActivity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
+            android:label="Register"
             android:name=".Activity.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:label="Login"
             android:name=".Activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -42,11 +43,24 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".Activity.SubjectActivity"
-            android:label="Subject" />
+            android:label="Subject"
+            android:screenOrientation="portrait" />
         <activity
+            android:label="SelectCourse"
             android:name=".Activity.CourseSelectionActivity"
-            android:noHistory="true" />
-        <activity android:name=".Activity.NavigatorActivity"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NavigatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:label="Quiz"
+            android:name=".Activity.QuizActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:label="Crossword"
+            android:name=".Activity.CrosswordActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

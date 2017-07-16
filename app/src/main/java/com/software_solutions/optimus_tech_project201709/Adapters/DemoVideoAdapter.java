@@ -19,7 +19,7 @@ import java.util.List;
  * Created by H.P on 03-Jul-17.
  */
 
-public class DemoVideoAdapter extends RecyclerView.Adapter<SlipDataHolder> {
+public class DemoVideoAdapter extends RecyclerView.Adapter<DemoVideoAdapter.SlipDataHolder> {
 
     private List<StringList> slipList;
 
@@ -52,50 +52,41 @@ public class DemoVideoAdapter extends RecyclerView.Adapter<SlipDataHolder> {
     public int getItemCount() {
         return slipList.size();
     }
-}
 
-class SlipDataHolder extends RecyclerView.ViewHolder {
 
-    private TextView nameOfSlip;
-    private ImageView slipImage;
-    private Context context;
+    class SlipDataHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public SlipDataHolder(View itemView) {
-        super(itemView);
+        private TextView nameOfSlip;
+        private ImageView slipImage;
+        private Context context;
 
-        context=itemView.getContext();
+        public SlipDataHolder(View itemView) {
+            super(itemView);
 
-        nameOfSlip = (TextView) itemView.findViewById(R.id.demoText);
-        slipImage = (ImageView) itemView.findViewById(R.id.imageViewDemoVideo);
+            context=itemView.getContext();
 
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (getAdapterPosition() == 0) {
+            nameOfSlip = (TextView) itemView.findViewById(R.id.demoText);
+            slipImage = (ImageView) itemView.findViewById(R.id.imageViewDemoVideo);
+            slipImage.setOnClickListener(this);
 
-                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-                    intent.putExtra("demoVideo", "oYaR9wyLiWs");
-                    context.startActivity(intent);
+        }
 
-                }
+        public void bindSlip(StringList stringList) {
+            nameOfSlip.setText(stringList.stringSlipName);
+            slipImage.setImageResource(stringList.stringImage);
+        }
 
-                if (getAdapterPosition() == 1) {
+        @Override
+        public void onClick(View view) {
 
-                    Intent intent = new Intent(context, YouTubePlayerActivity.class);
-                    intent.putExtra("demoVideo", "GqdJFFvsZeE");
-                    context.startActivity(intent);
-
-                }
-
-            }
-        });
+            Intent intent = new Intent(context, YouTubePlayerActivity.class);
+            intent.putExtra("demoVideo", "oYaR9wyLiWs");
+            context.startActivity(intent);
+        }
     }
 
-    public void bindSlip(StringList stringList) {
-        nameOfSlip.setText(stringList.stringSlipName);
-        slipImage.setImageResource(stringList.stringImage);
-    }
 }
+
 
 class StringList {
     public String stringSlipName;
