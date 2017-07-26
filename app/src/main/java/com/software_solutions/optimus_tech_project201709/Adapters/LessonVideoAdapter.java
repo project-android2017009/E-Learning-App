@@ -102,8 +102,8 @@ public class LessonVideoAdapter extends RecyclerView.Adapter<LessonVideoAdapter.
                 dialog.setContentView(R.layout.abc_dialog_option_chapter);
                 dialog.setTitle("What Do You Want?");
 
-                TextView text = (TextView) dialog.findViewById(R.id.dialogLessonName);
-                text.setText("Lesson Name");
+//                TextView text = (TextView) dialog.findViewById(R.id.dialogLessonName);
+//                text.setText("Lesson Name");
 
                 TextView text1 = (TextView) dialog.findViewById(R.id.dialogChapterName);
                 text1.setText(s1);

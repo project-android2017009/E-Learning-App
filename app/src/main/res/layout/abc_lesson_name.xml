@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="3dp"
-        app:cardBackgroundColor="#b7a2d6"
+        app:cardBackgroundColor="#9e74c1"
         app:cardCornerRadius="10dp">
 
         <RelativeLayout

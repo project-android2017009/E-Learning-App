@@ -26,12 +26,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBar" />
         <activity
-            android:label="Register"
             android:name=".Activity.RegisterActivity"
+            android:label="Register"
             android:screenOrientation="portrait" />
         <activity
-            android:label="Login"
             android:name=".Activity.LoginActivity"
+            android:label="Login"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Home"
@@ -46,21 +46,24 @@
             android:label="Subject"
             android:screenOrientation="portrait" />
         <activity
-            android:label="SelectCourse"
             android:name=".Activity.CourseSelectionActivity"
+            android:label="SelectCourse"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.NavigatorActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:label="Quiz"
             android:name=".Activity.QuizActivity"
+            android:label="Quiz"
             android:screenOrientation="portrait" />
         <activity
-            android:label="Crossword"
             android:name=".Activity.CrosswordActivity"
+            android:label="Crossword"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:label="Profile" />
     </application>
 
 </manifest>

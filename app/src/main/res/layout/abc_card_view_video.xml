@@ -8,7 +8,7 @@
         android:layout_height="180dp"
         android:layout_margin="5dp"
         android:elevation="5dp"
-        app:cardBackgroundColor="#e4a455"
+        app:cardBackgroundColor="#dfa65f"
         app:cardCornerRadius="10dp">
 
         <LinearLayout
@@ -48,7 +48,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_weight=".8"
-                app:cardBackgroundColor="#e9e6e3"
+                app:cardBackgroundColor="#fff"
                 app:cardCornerRadius="10dp">
 
                 <RelativeLayout
